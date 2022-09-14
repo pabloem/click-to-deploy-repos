@@ -6,8 +6,7 @@ metadata:
     app.kubernetes.io/name: {{ .Release.Name }}
     app.kubernetes.io/component: kafka
 spec:
-  type: "ClusterIP"
-  clusterIP: None
+  type: "NodePort"
   ports:
     - name: "client"
       port: 9092
@@ -27,7 +26,7 @@ metadata:
     app.kubernetes.io/name: {{ .Release.Name }}
     app.kubernetes.io/component: kafka
 spec:
-  type: "ClusterIP"
+  type: "NodePort"
   ports:
     - name: "client"
       port: 9092
